@@ -1,6 +1,6 @@
 +++
-title = "Introduction to Feast"
-description = "Overview of Feast for feature storage, management, and serving"
+title = "Feast as a Feature Store"
+description = "Overview of Feast's feature store components"
 weight = 10
                     
 +++
@@ -10,23 +10,6 @@ weight = 10
   
 Use [Feast](http://feast.dev/) for defining, managing, discovering, validating, and serving features to your models during training and inference.
 
-This page introduces feature store concepts as well as Feast as a component of Kubeflow.
-
-## Introduction to feature stores
-
-Feature stores are systems that help to address some of the key challenges that ML teams face when productionizing features
-
-* __Feature sharing and reuse__: Engineering features is one of the most time consuming activities in building an end-to-end ML system, yet many teams continue to develop features in silos. This leads to a high amount of re-development and duplication of work across teams and projects.
-
-* __Serving features at scale__: Models need data that can come from a variety of sources, including event streams, data lakes, warehouses, or notebooks. ML teams need to be able to store and serve all these data sources to their models in a performant and reliable way. The challenge is scalably producing massive datasets of features for model training, and providing access to real-time feature data at low latency and high throughput in serving.
-
-* __Consistency between training and serving__: The separation between data scientists and engineering teams often lead to the re-development of feature transformations when moving from training to online serving. Inconsistencies that arise due to discrepancies between training and serving implementations frequently leads to a drop in model performance in production.
-
-* __Point-in-time correctness__:  General purpose data systems are not built with ML use cases in mind and by extension don't provide point-in-time correct lookups of feature data. Without a point-in-time correct view of data, models are trained on datasets that are not representative of what is found in production, leading to a drop in accuracy.
-
-* __Data quality and validation__: Features are business critical inputs to ML systems. Teams need to be confident in the quality of data that is served in production and need to be able to react when there is any drift in the underlying data.
-
-## Feast as a feature store
 
 [Feast](http://feast.dev/) is an [open-source](https://github.com/feast-dev/feast) feature store that helps teams operate ML systems at scale by allowing them to define, manage, validate, and serve features to models in production. 
 
